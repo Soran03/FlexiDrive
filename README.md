@@ -52,34 +52,8 @@ Welcome to the Car Rental App! This is a full-stack Android application designed
 ## Screenshots
 
 ![Login Screen](Screenshots/Figma_signinup.png)
-![Car List](Screenshots/car_list.png)
-![Booking Screen](Screenshots/booking_screen.png)
+![Home Page](Screenshots/Figma_home.png)
 
-## Contributing
-
-We welcome contributions to enhance the Car Rental App. To contribute, follow these steps:
-
-1. **Fork the Repository**: Click on the `Fork` button on the top right of this page.
-2. **Clone Your Fork**:
-    ```bash
-    git clone https://github.com/yourusername/car-rental-app.git
-    ```
-3. **Create a Branch**:
-    ```bash
-    git checkout -b feature/your-feature-name
-    ```
-4. **Make Your Changes**: Implement your feature or fix the bug.
-5. **Commit and Push**:
-    ```bash
-    git add .
-    git commit -m "Add your commit message"
-    git push origin feature/your-feature-name
-    ```
-6. **Create a Pull Request**: Open a pull request to the `main` branch of the original repository.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
