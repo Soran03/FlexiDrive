@@ -25,7 +25,7 @@ Welcome to the FlexiRent Car Rental App! This is a full-stack Android applicatio
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/car-rental-app.git
+    git clone https://github.com/Soran03/FlexiRent.git
     ```
 2. **Open in Android Studio**:
     - Open Android Studio.
@@ -45,13 +45,6 @@ Welcome to the FlexiRent Car Rental App! This is a full-stack Android applicatio
     - Connect your Android device or start an emulator.
     - Click on `Run` > `Run 'app'`.
 
-## Usage
-
-- **Sign Up/Sign In**: Create a new account or sign in with existing credentials.
-- **Browse Cars**: View available cars with details such as model, price, and availability.
-- **Book a Car**: Select a car, choose rental dates, and book the car.
-- **Manage Bookings**: View your booking history and upcoming rentals.
-- **Notifications**: Get notified about your booking status and updates.
 
 ## Screenshots
 
