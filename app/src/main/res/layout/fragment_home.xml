@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/off_white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeHeaderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home_header"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/homeWelcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Welcome, User 👋"
+                android:textColor="@color/off_white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/homeProfileImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/icon_circle_user"
+                app:civ_border_color="@color/off_white"
+                app:civ_border_overlay="false"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="@color/off_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/homeHeaderLocationIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/icon_map_marker"
+                android:tint="@color/pink_600"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeWelcomeText" />
+
+            <TextView
+                android:id="@+id/homeHeaderLocationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Location"
+                android:textColor="@color/off_white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/homeHeaderLocationText"
+                app:layout_constraintStart_toEndOf="@+id/homeHeaderLocationIcon"
+                app:layout_constraintTop_toTopOf="@+id/homeHeaderLocationIcon" />
+
+            <TextView
+                android:id="@+id/homeHeaderLocationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Current Address"
+                android:textColor="@color/off_white"
+                app:layout_constraintBottom_toBottomOf="@+id/homeHeaderLocationIcon"
+                app:layout_constraintStart_toEndOf="@+id/homeHeaderLocationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/homeHeaderLocationLabel" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeHeaderSearchCarLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeHeaderStartDateLayout">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/homeHeaderCarInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInput"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/homeHeaderCarInputET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/off_white"
+                        android:fontFamily="@font/montserrat"
+                        android:hint="Search Car..."
+                        android:paddingStart="40dp"
+                        android:paddingEnd="56dp"
+                        android:singleLine="true"
+                        android:textColorHighlight="#D30B0B"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/homeHeaderSearchCarBtn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/pink_600"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingLeft="14dp"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/icon_arrow_forward"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeHeaderCarInputLayout"
+                    app:layout_constraintEnd_toEndOf="@+id/homeHeaderCarInputLayout"
+                    app:layout_constraintTop_toTopOf="@+id/homeHeaderCarInputLayout" />
+
+                <ImageView
+                    android:id="@+id/homeHeaderSearchCarIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/icon_search"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeHeaderCarInputLayout"
+                    app:layout_constraintStart_toStartOf="@+id/homeHeaderCarInputLayout"
+                    app:layout_constraintTop_toTopOf="@+id/homeHeaderCarInputLayout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeHeaderEndDateLayout"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_home_header_date_select"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/homeHeaderStartDateLayout"
+                app:layout_constraintTop_toBottomOf="@+id/homeHeaderLocationText">
+
+                <ImageView
+                    android:id="@+id/homeHeaderEndDateIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/icon_event"
+                    android:tint="@color/blue_100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/homeHeaderEndDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="End"
+                    android:textColor="@color/blue_100"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/homeHeaderEndDateText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/homeHeaderEndDateIcon"
+                    app:layout_constraintTop_toTopOf="@+id/homeHeaderEndDateIcon" />
+
+                <TextView
+                    android:id="@+id/homeHeaderEndDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sun 07/01"
+                    android:textColor="@color/off_white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeHeaderEndDateIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/homeHeaderEndDateIcon"
+                    app:layout_constraintTop_toBottomOf="@id/homeHeaderEndDateLabel" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeHeaderStartDateLayout"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_home_header_date_select"
+                app:layout_constraintEnd_toStartOf="@+id/homeHeaderEndDateLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeHeaderLocationText">
+
+                <ImageView
+                    android:id="@+id/homeHeaderStartDateIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/icon_event"
+                    android:tint="@color/blue_100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/homeHeaderStartDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Start"
+                    android:textColor="@color/blue_100"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/homeHeaderStartDateText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/homeHeaderStartDateIcon"
+                    app:layout_constraintTop_toTopOf="@+id/homeHeaderStartDateIcon" />
+
+                <TextView
+                    android:id="@+id/homeHeaderStartDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Mon 01/01"
+                    android:textColor="@color/off_white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeHeaderStartDateIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/homeHeaderStartDateIcon"
+                    app:layout_constraintTop_toBottomOf="@id/homeHeaderStartDateLabel" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeBrandsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeHeaderLayout">
+
+            <TextView
+                android:id="@+id/homeBrandsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Brands"
+                android:textColor="@color/blue_800"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeBrandsRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeBrandsLabel" />
+
+            <View
+                android:id="@+id/homeBrandsDiv"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeBrandsRecyclerView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeRecentCarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeBrandsLayout">
+
+            <include
+                android:id="@+id/sampleHomeRecentCar"
+                layout="@layout/sample_home_recent_car"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></include>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="391dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homePopularCarsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeRecentCarLayout">
+
+            <TextView
+                android:id="@+id/homePopularCarsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Popular Cars"
+                android:textColor="@color/blue_800"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homePopularCarsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homePopularCarsLabel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
