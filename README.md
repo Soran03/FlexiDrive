@@ -36,6 +36,10 @@ Welcome to the Car Rental App! This is a full-stack Android application designed
     - Add an Android app to your Firebase project.
     - Download the `google-services.json` file and place it in the `app/` directory of your Android project.
     - Enable Authentication and Firestore in the Firebase Console.
+    - Create or update your `local.properties` file in the root of your project and add your API key:
+        ```properties
+        API_KEY=your_api_key_here
+        ```
 
 4. **Build and Run**:
     - Connect your Android device or start an emulator.
