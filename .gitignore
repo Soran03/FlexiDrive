@@ -1,15 +1,26 @@
+# Ignore all iml files
 *.iml
+
+# Gradle files
 .gradle
+
+# Local configuration file
+local.properties
 /local.properties
+
+# IntelliJ IDEA files
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+
+# macOS files
 .DS_Store
+
+# Build directories
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
