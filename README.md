@@ -51,7 +51,7 @@ Welcome to the Car Rental App! This is a full-stack Android application designed
 
 ## Screenshots
 
-![Login Screen](Screenshots/figma_signinup.png)
+![Login Screen](Screenshots/Figma signinup.png)
 ![Car List](Screenshots/car_list.png)
 ![Booking Screen](Screenshots/booking_screen.png)
 
