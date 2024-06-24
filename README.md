@@ -1,8 +1,8 @@
-# FlexiRent - Car Rental App
+# FlexiDrive - Car Rental App
 
 ## Overview
 
-Welcome to the FlexiRent Car Rental App! This is a full-stack Android application designed to streamline the process of renting and managing cars. Developed using Kotlin and Android Studio, the app leverages Firebase for backend services and incorporates the MVVM architecture for robust and maintainable code.
+Welcome to the FlexiDrive Car Rental App! This is a full-stack Android application designed to streamline the process of renting and managing cars. Developed using Kotlin and Android Studio, the app leverages Firebase for backend services and incorporates the MVVM architecture for robust and maintainable code.
 
 ## Features
 
