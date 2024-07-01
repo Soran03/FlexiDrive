@@ -50,41 +50,41 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/homeHeaderLocationIcon"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/icon_map_marker"
-                android:tint="@color/pink_600"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/homeWelcomeText" />
+<!--            <ImageView-->
+<!--                android:id="@+id/homeHeaderLocationIcon"-->
+<!--                android:layout_width="28dp"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:src="@drawable/icon_map_marker"-->
+<!--                android:tint="@color/pink_600"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/homeWelcomeText" />-->
 
-            <TextView
-                android:id="@+id/homeHeaderLocationLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/montserrat"
-                android:text="Location"
-                android:textColor="@color/off_white"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toTopOf="@id/homeHeaderLocationText"
-                app:layout_constraintStart_toEndOf="@+id/homeHeaderLocationIcon"
-                app:layout_constraintTop_toTopOf="@+id/homeHeaderLocationIcon" />
+<!--            <TextView-->
+<!--                android:id="@+id/homeHeaderLocationLabel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:fontFamily="@font/montserrat"-->
+<!--                android:text="Location"-->
+<!--                android:textColor="@color/off_white"-->
+<!--                android:textSize="12sp"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/homeHeaderLocationText"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/homeHeaderLocationIcon"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/homeHeaderLocationIcon" />-->
 
-            <TextView
-                android:id="@+id/homeHeaderLocationText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:text="Current Address"
-                android:textColor="@color/off_white"
-                app:layout_constraintBottom_toBottomOf="@+id/homeHeaderLocationIcon"
-                app:layout_constraintStart_toEndOf="@+id/homeHeaderLocationIcon"
-                app:layout_constraintTop_toBottomOf="@+id/homeHeaderLocationLabel" />
+<!--            <TextView-->
+<!--                android:id="@+id/homeHeaderLocationText"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:text="Enter Location"-->
+<!--                android:textColor="@color/off_white"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/homeHeaderLocationIcon"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/homeHeaderLocationIcon"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/homeHeaderLocationLabel" />-->
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/homeHeaderSearchCarLayout"
@@ -121,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/off_white"
                         android:fontFamily="@font/montserrat"
-                        android:hint="Search Car..."
+                        android:hint="Enter City..."
                         android:paddingStart="40dp"
                         android:paddingEnd="56dp"
                         android:singleLine="true"
@@ -161,12 +161,12 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_home_header_date_select"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/homeHeaderStartDateLayout"
-                app:layout_constraintTop_toBottomOf="@+id/homeHeaderLocationText">
+                app:layout_constraintTop_toBottomOf="@+id/homeWelcomeText">
 
                 <ImageView
                     android:id="@+id/homeHeaderEndDateIcon"
@@ -215,12 +215,12 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="4dp"
                 android:background="@drawable/bg_home_header_date_select"
                 app:layout_constraintEnd_toStartOf="@+id/homeHeaderEndDateLayout"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/homeHeaderLocationText">
+                app:layout_constraintTop_toBottomOf="@+id/homeWelcomeText">
 
                 <ImageView
                     android:id="@+id/homeHeaderStartDateIcon"

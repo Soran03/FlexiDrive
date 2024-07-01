@@ -100,10 +100,10 @@ class HomeFragment : Fragment() {
 
                 binding.sampleHomeRecentCar.homeRecentCarBrand.text = it.second.brand
                 binding.sampleHomeRecentCar.homeRecentCarModel.text = it.second.model
-                binding.sampleHomeRecentCar.homeRecentCarPrice.text = "£${it.second.rentalPricePerDay}"
+//                binding.sampleHomeRecentCar.homeRecentCarPrice.text = "£${it.second.rentalPricePerDay}"
 
                 val recentDates = "${formatDateDDMM(it.first.rentalDate)} - ${formatDateDDMM(it.first.expectedReturnDate)}"
-                binding.sampleHomeRecentCar.homeRecentCarDates.text = recentDates
+//                binding.sampleHomeRecentCar.homeRecentCarDates.text = recentDates
 
                 Picasso.get().load(it.second.image)
                     .placeholder(R.drawable.ic_menu_gallery)

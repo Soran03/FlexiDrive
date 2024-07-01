@@ -22,6 +22,7 @@ class HomePopularCarsAdapter(private var popularCarList: List<CarModel>) : Recyc
         val doorsTv: TextView = itemView.findViewById(R.id.homePopularCarDoors)
         val transmissionTv: TextView = itemView.findViewById(R.id.homePopularCarTransmission)
         val addressTv: TextView = itemView.findViewById(R.id.homePopularCarAddress)
+        val priceTv: TextView = itemView.findViewById(R.id.homePopularCarPrice)
 
         val carImage: ImageView = itemView.findViewById(R.id.homePopularCarImage)
     }
@@ -42,6 +43,7 @@ class HomePopularCarsAdapter(private var popularCarList: List<CarModel>) : Recyc
         holder.seatsTv.text = currentCar.seats.toString()
         holder.doorsTv.text = currentCar.doors.toString()
         holder.transmissionTv.text = currentCar.transmission
+        holder.priceTv.text = "£${currentCar.rentalPricePerDay.toString()}"
 
         Picasso.get()
             .load(currentCar.image)
