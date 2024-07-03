@@ -1,13 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/off_white"
     tools:context=".Fragments.NotificationsFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="notifications" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notificationsHeaderLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Updates"
+            android:textColor="@color/off_white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notificationsBookingLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationsHeaderLayout">
+
+        <ImageView
+            android:id="@+id/notificationsBookingCarImage"
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_offwhite_blue_round"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_menu_gallery" />
+
+        <TextView
+            android:id="@+id/notificationsBookingCarModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Model"
+            android:textColor="@color/blue_800"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingCarBrand" />
+
+        <TextView
+            android:id="@+id/notificationsBookingAddressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Pick up from"
+            android:textColor="@color/blue_800"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingCarModel" />
+
+        <TextView
+            android:id="@+id/notificationsBookingAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Address"
+            android:textColor="@color/blue_800"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingAddressLabel" />
+
+        <TextView
+            android:id="@+id/notificationsBookingDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Date"
+            android:textColor="@color/blue_800"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingAddressText" />
+
+        <TextView
+            android:id="@+id/notificationsBookingDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Monday 01/01"
+            android:textColor="@color/blue_800"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingDateLabel" />
+
+        <TextView
+            android:id="@+id/notificationsBookingCarBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_car_brand_text_darkblue"
+            android:fontFamily="@font/montserrat_bold"
+            android:paddingLeft="6dp"
+            android:paddingTop="0dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="0dp"
+            android:text="Brand"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingTitle" />
+
+        <TextView
+            android:id="@+id/notificationsBookingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Upcoming Booking"
+            android:textColor="@color/blue_800"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/notificationsBookingDetailsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/blue_800"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="View Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notificationsBookingCancelBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingDateText" />
+
+        <Button
+            android:id="@+id/notificationsBookingCancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/pink_600"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Cancel Booking"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/notificationsBookingDetailsBtn"
+            app:layout_constraintTop_toBottomOf="@+id/notificationsBookingDateText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

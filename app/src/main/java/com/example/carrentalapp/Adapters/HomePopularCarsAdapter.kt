@@ -6,9 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.compose.ui.layout.Layout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.carrentalapp.DataModels.CarBrandModel
 import com.example.carrentalapp.DataModels.CarModel
 import com.example.carrentalapp.R
 import com.squareup.picasso.Picasso
@@ -57,7 +55,7 @@ class HomePopularCarsAdapter(private var popularCarList: List<CarModel>) : Recyc
 
     override fun getItemCount() = popularCarList.size
 
-    fun updateBrands(newCars: List<CarModel>) {
+    fun updateCarList(newCars: List<CarModel>) {
         popularCarList = newCars
         notifyDataSetChanged()
     }

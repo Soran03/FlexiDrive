@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.carrentalapp.DataModels.ResultModel
 import com.example.carrentalapp.Repositories.AuthenticationRepository
 import com.example.carrentalapp.Repositories.DatabaseRepository
-import com.example.carrentalapp.ViewModelFactories.SignUpViewModelFactory
 import com.example.carrentalapp.ViewModels.SignUpViewModel
+import com.example.carrentalapp.ViewModels.SignUpViewModelFactory
 import com.example.carrentalapp.databinding.ActivitySignUpBinding
 
 class SignUpActivity : ComponentActivity() {

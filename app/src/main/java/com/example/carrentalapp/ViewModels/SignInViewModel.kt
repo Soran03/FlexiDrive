@@ -3,6 +3,7 @@ package com.example.carrentalapp.ViewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.carrentalapp.DataModels.ResultModel
 import com.example.carrentalapp.Repositories.AuthenticationRepository
@@ -30,5 +31,19 @@ class SignInViewModel(
                 }
             }
         }
+    }
+}
+
+
+class SignInViewModelFactory(
+    private val authRepo: AuthenticationRepository,
+    private val dbRepo: DatabaseRepository
+) : ViewModelProvider.Factory {
+
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(SignInViewModel::class.java)) {
+            return SignInViewModel(authRepo, dbRepo) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

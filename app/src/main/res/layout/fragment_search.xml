@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/off_white"
     tools:context=".Fragments.SearchFragment">
 
 
@@ -37,6 +38,7 @@
             android:fontFamily="@font/montserrat"
             android:text="Filters"
             android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/off_white"
             android:textSize="14sp"
             app:cornerRadius="50dp"
@@ -92,7 +94,6 @@
             app:icon="@drawable/icon_pencil"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
 
         <ImageView

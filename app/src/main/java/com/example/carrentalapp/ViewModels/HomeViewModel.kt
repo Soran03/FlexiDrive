@@ -17,7 +17,8 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel(
     private val dbRepo: DatabaseRepository,
-    private val authRepo: AuthenticationRepository)
+    private val authRepo: AuthenticationRepository
+)
     : ViewModel() {
 
     private val _userData = MutableLiveData<UserModel>()
@@ -42,7 +43,10 @@ class HomeViewModel(
             when (userResult) {
                 is ResultModel.Success -> {
                     _userData.value = userResult.data
-                    fetchMostRecentRental(userResult.data.rentalHistory[0])
+                    try{
+                        fetchMostRecentRental(userResult.data.rentalHistory[0])
+                    }
+                    catch (_: Exception){}
                 }
                 is ResultModel.Error -> _error.value += "FetchUserData: ${userResult.exception.message}"
             }

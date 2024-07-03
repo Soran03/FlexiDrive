@@ -1,6 +1,5 @@
 package com.example.carrentalapp.Fragments
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.transition.Visibility
 import com.example.carrentalapp.Adapters.HomeBrandsAdapter
 import com.example.carrentalapp.Adapters.HomePopularCarsAdapter
 import com.example.carrentalapp.R
@@ -21,8 +19,6 @@ import com.example.carrentalapp.ViewModels.HomeViewModelFactory
 import com.example.carrentalapp.databinding.FragmentHomeBinding
 import com.squareup.picasso.Picasso
 import java.util.Date
-import java.sql.Time
-import java.sql.Timestamp
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -112,7 +108,7 @@ class HomeFragment : Fragment() {
         }
 
         viewModel.popularCars.observe(viewLifecycleOwner) { cars ->
-            popularCarsAdapter.updateBrands(cars)
+            popularCarsAdapter.updateCarList(cars)
         }
 
         viewModel.error.observe(viewLifecycleOwner) { errorMessage ->
